@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        #navbar{
+            border: 1px solid red;
+            width: 100%;
+            background-color: black;
+            top: 0;
+            left: 0;
+            position: relative;
+    
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+        }
+        h1{
+            color: aliceblue;
+            font-family: Candara;
+            font-weight: 1000;
+            padding: 10px;
+            font-size: 25px;
+        }
+        #container{
+
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: auto;
+            gap: 20px 10px;
+            background-color: rgb(217, 242, 242);
+            margin-top: 30px;
+            padding: 10px;
+
+        }
+
+        #container div{
+            width: 310px;
+            height: 450px; 
+            text-wrap: wrap;  
+            border-radius: 10px;
+            margin: auto;
+            background-color: white;
+        }
+
+        #container div img{  
+            width: 95%;
+            height: 60%;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        #container div h3{  
+            font-size: 17px;
+            font-family: Candara;
+            font-weight: 1000;
+            color: rgb(70, 99, 125);
+            padding: 1px 10px;
+        }
+
+        #container div h5{  
+            font-family: Candara;
+            font-weight: 1000;
+            color: rgb(42, 101, 152);
+            padding: 1px 10px;
+            line-height: 15px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        select{
+            width: 200px;
+            height: 30px;
+            background-color: teal;
+            font-size: 18px;
+            color: aliceblue;
+            font-family: Candara;
+            font-weight: 1000;
+            margin-left: 30px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        #search-input{
+            width: 300px;
+            height: 25px;
+            background-color: rgb(184, 195, 195);
+            color: rgb(3, 22, 39);
+            font-size: 18px;
+            font-weight: 500;
+            font-family: Candara;
+            margin-top: 30px;
+            padding-left: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <h1>Product Listing Page</h1>
+            <div>
+                <select id="filterBycat">
+                    <option value="All">All</option>
+                    <option value="electronics">electronics</option>
+                    <option value="jewelery">jewelery</option>
+                    <option value="men's clothing">men's clothing</option>
+                    <option value="women's clothing">women's clothing</option>
+                </select>
+            </div>
+
+            <input type="text" id="search-input" placeholder="Search for products...">
+            <ul id="product-list"></ul>
+
+            <select id="filterByPrice">
+                <option value="desc">High to Low</option>
+                <option value="asc">Low to High</option>
+            </select>
+        </nav>
+    </div>
+
+
+    <div id="container"></div>
+    
+</body>
+<script src="product.js">
+</script>
+</html>
