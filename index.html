@@ -7,7 +7,7 @@
     <title>Product Page</title>
     <style>
         #navbar{
-            border: 1px solid red;
+
             width: 100%;
             background-color: black;
             top: 0;
@@ -101,8 +101,10 @@
 <body>
     <div id="navbar">
         <nav>
-            <h1>Product Listing Page</h1>
+ <!-- ------------------Navbar title------------------------- -->
+            <h1>Product Listing Page</h1>  
             <div>
+                <!-- ------------------Search by categoty------------------------- -->
                 <select id="filterBycat">
                     <option value="All">All</option>
                     <option value="electronics">electronics</option>
@@ -112,9 +114,12 @@
                 </select>
             </div>
 
+            <!-- ------------------Search bar------------------------- -->
             <input type="text" id="search-input" placeholder="Search for products...">
             <ul id="product-list"></ul>
 
+
+            <!-- ------------------filtered by price------------------------- -->
             <select id="filterByPrice">
                 <option value="desc">High to Low</option>
                 <option value="asc">Low to High</option>
@@ -122,7 +127,7 @@
         </nav>
     </div>
 
-
+<!-- ------------------container div------------------------- -->
     <div id="container"></div>
     
 </body>
